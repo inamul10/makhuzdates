@@ -199,7 +199,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background: url(' https://images.pexels.com/photos/2386158/pexels-photo-2386158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    /* background: url(' https://images.pexels.com/photos/2386158/pexels-photo-2386158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover; */
     z-index: -1;
     opacity: 0.7;
    
@@ -224,8 +224,8 @@
 }
 
 footer{
-    background-color: brown;
-    color: white;
+    background-color: #d98f35;
+    color: rgb(0, 0, 0);
     padding: 10px;
 }
 #contact-box{

@@ -8,22 +8,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
+            <button class=" btn btn-bg-c" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Cart <i class="bi bi-cart4"></i><span
+                    class="badge text-bg-secondary mx-2">{{ CartService.getCartCount() }}</span></button>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item ">
                     <a class="nav-link" style="color: black;" href="#"><b>Makhuz Dates</b></a>
                 </li>
             </ul>
-            <button class=" btn btn-light" type="button" style="padding-bottom: 2px;
-            padding-top: 2px;" data-bs-toggle="modal" data-bs-target="#exampleModal"> Cart<span
-                    class="badge text-bg-secondary mx-2">{{ CartService.getCartCount() }}</span></button>
         </div>
     </div>
 </nav>
 
 
+
 <div class="row" style="margin-left: 60px;">
+    <form style="display: inline;">
+        <!-- <button type="button" class="btn btn-primary" name="search" (click)="search()">Search<i class="bi bi-search m-2"></i></button> -->
+        <input type="text" placeholder="Search for items here" name="searchText" class="form-control mx-2 my-2"
+            style="display: inline; width: 30%;border-color: black; margin-left: 10px;" [(ngModel)]="searchTerm" />
+
+    </form>
     <h1 style="color: brown;">Dates</h1>
-    <div class="card col-sm-6" style="width: 18rem;" *ngFor="let items of Dates">
+    <div class="card col-sm-6" style="width: 18rem;" *ngFor="let items of Dates | search: searchTerm">
         <img src={{items.src}} class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{items.name}}</h5>
@@ -40,7 +46,7 @@
 <div class="row my-4" style="margin-left: 60px;">
     <h1 style="color: brown;">DryFruits</h1>
 
-    <div class="card col-sm-6" style="width: 18rem;" *ngFor="let items of Dryfruits">
+    <div class="card col-sm-6" style="width: 18rem;" *ngFor="let items of Dryfruits | search: searchTerm">
         <img src="{{items.src}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{items.name}}</h5>
@@ -56,7 +62,7 @@
 <div class="row my-4" style="margin-left: 60px;">
     <h1 style="color: brown;">Dried Fruits</h1>
 
-    <div class="card col-sm-6" s style="width: 18rem;" *ngFor="let items of Driedfruits">
+    <div class="card col-sm-6" s style="width: 18rem;" *ngFor="let items of Driedfruits | search: searchTerm">
         <img src="{{items.src}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{items.name}}</h5>
@@ -77,7 +83,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cart<i class="bi bi-cart4"></i></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -97,20 +103,22 @@
                             <td>{{items.name}}</td>
                             <td>1000 gms</td>
                             <td>{{items.price}}/-</td>
-                            <td><button (click)="removeitem(items)" class="btn btn-danger btn-sm">Remove item</button></td>
+                            <td><button (click)="removeitem(items)" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            </td>
+                            
                         </tr>
-                       
+
 
                     </tbody>
                 </table>
             </div>
-            <div class="append-end" style="margin: 10px;"> 
+            <div class="append-end" style="margin: 10px;">
                 <h6>Cart Total:{{CartService.cartTotal()}}</h6>
             </div>
             <div class="modal-footer">
 
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Buy Now</button>
+                <button type="button" routerLink="/checkout" data-bs-dismiss="modal" class="btn btn-primary">Buy Now</button>
             </div>
         </div>
     </div>

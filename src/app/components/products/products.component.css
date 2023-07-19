@@ -1,8 +1,7 @@
-
 #navbar {
     display: flex;
     align-items: center;
-    background-color:#dca057;
+    background-color: #dca057;
 
 }
 
@@ -30,31 +29,45 @@
     border-radius: 4px;
 
 }
+
 #navbar ul li a:hover {
     color: rgb(173, 117, 3);
     background-color: blanchedalmond;
 }
+
 #navbar ul li a.active {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-.card{
-    padding:10px;
+.card {
+    padding: 10px;
     margin: 10px;
 }
 
-.btn-primary{
-background-color: #dca057;
-color: black;
-border-style: none;
+.btn-primary {
+    background-color: #dca057;
+    color: black;
+    border-style: none;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: #89581c;
     color: white;
 }
 
-.card-img-top{
-    height:50%;
+.card-img-top {
+    height: 50%;
     margin-bottom: 10px;
 }
+
+.btn-bg-c {
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+/* 
+.text-bg{
+    color: #89581c;
+} */

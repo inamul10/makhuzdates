@@ -13,7 +13,12 @@
      --navbar-height: 59px;
 } */
 
-
+.headin{
+    display: flex; 
+    justify-content: center;
+     flex-direction: column;
+     align-items: center;
+}
 
 #navbar {
     display: flex;
@@ -22,9 +27,18 @@
 
 }
 
+.btn-bg-c{
+
+    background-color: #dca057;
+    color: black;
+    border-color:#dca057 ;
+    /* display: flex; */
+    margin-top: 10px;
+}
 
 
-#logo img {
+
+.logo img {
     height: 40px;
     margin: 10px;
 

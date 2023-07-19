@@ -1,0 +1,65 @@
+<div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary " style="padding: 0px; margin: 0px;">
+    <div class="container-fluid" id="navbar">
+        <a class="navbar-brand" href="#">CheckOut</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" style="color: black;" href="#"><b>Makhuz Dates</b></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    
+    <div class="card" style="width: 50%;">
+        <h1 style="margin: auto;">Checkout Page</h1>
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Payment Option</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Payment Mode</option>
+                    <option value="1">UPI</option>
+                    <option value="2">Debit/Credit Card</option>
+                    <option value="3">COD</option>
+                  </select>
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Your Cart Total is: <b>{{CartService.cartTotal()}}/-</b></label>
+              <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            </div>
+
+          
+           
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Pay Now</button>
+          </form>
+    </div>
+</div>

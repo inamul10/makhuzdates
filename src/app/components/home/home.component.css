@@ -273,11 +273,14 @@ footer{
     margin:10px;
     /* box-shadow: 5px 5px; */
     margin-bottom: 30px;
+    transition: 450ms;
 
     
 
 }
-
+ .card:hover {
+    transform: scale(1.09);
+ }
 
 .image{
 height: 50%;
